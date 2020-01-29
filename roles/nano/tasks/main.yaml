@@ -1,0 +1,7 @@
+- name: Configure nano
+  blockinfile:
+    path: "{{ ansible_user_dir }}/.nanorc"
+    create: yes
+    block: |
+      set tabsize 4
+      set tabstospaces

@@ -1,0 +1,10 @@
+- name: Root mode
+  hosts: localhost
+  become: yes
+  roles:
+    - nano
+
+- name: User mode
+  hosts: localhost
+  roles:
+    - nano
