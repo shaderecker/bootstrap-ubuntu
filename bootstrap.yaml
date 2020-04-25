@@ -3,6 +3,7 @@
   become: yes
   roles:
     - nano
+    - app_icons
 
 - name: User mode
   hosts: localhost

@@ -1,0 +1,9 @@
+- name: Remove Additional Drivers Icon
+  file:
+    path: /usr/share/applications/software-properties-drivers.desktop
+    state: absent
+
+- name: Remove Livepatch Icon
+  file:
+    path: /usr/share/applications/software-properties-livepatch.desktop
+    state: absent
