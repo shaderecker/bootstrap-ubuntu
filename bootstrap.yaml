@@ -4,8 +4,10 @@
   roles:
     - nano
     - app_icons
+    - zsh
 
 - name: User mode
   hosts: localhost
   roles:
     - nano
+    - zsh
