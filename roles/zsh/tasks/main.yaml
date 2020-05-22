@@ -35,3 +35,19 @@
     path: "{{ ansible_user_dir }}/.zshrc"
     regexp: "^ZSH_THEME="
     line: "ZSH_THEME=\"bullet-train\""
+
+- name: Download zsh-autosuggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+- name: Download zsh-syntax-highlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+- name: Enable plugins
+  lineinfile:
+    path: "{{ ansible_user_dir }}/.zshrc"
+    regexp: "^plugins="
+    line: "plugins=(git command-not-found ssh-agent colored-man-pages extract zsh-autosuggestions zsh-syntax-highlighting)"
