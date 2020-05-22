@@ -1,0 +1,36 @@
+- name: Install zsh & more
+  apt:
+    force_apt_get: yes
+    name:
+      - zsh
+      - fonts-powerline
+      - fonts-ancient-scripts
+    state: present
+  become: yes
+
+- name: Change default shell
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
+
+- name: Download oh-my-zsh
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh"
+
+- name: Copy .zshrc file
+  copy:
+    src: "{{ ansible_user_dir }}/.oh-my-zsh/templates/zshrc.zsh-template"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    remote_src: yes
+
+- name: Download bullet train theme
+  get_url:
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom"
+    url: http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+
+- name: Enable bullet train theme
+  lineinfile:
+    path: "{{ ansible_user_dir }}/.zshrc"
+    regexp: "^ZSH_THEME="
+    line: "ZSH_THEME=\"bullet-train\""
