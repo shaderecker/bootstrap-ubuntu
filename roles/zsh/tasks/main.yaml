@@ -12,6 +12,7 @@
   user:
     name: "{{ ansible_user_id }}"
     shell: /bin/zsh
+  become: yes
 
 - name: Download oh-my-zsh
   git:
