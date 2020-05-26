@@ -51,4 +51,4 @@
   lineinfile:
     path: "{{ ansible_user_dir }}/.zshrc"
     regexp: "^plugins="
-    line: "plugins=(git command-not-found ssh-agent colored-man-pages extract zsh-autosuggestions zsh-syntax-highlighting)"
+    line: "plugins=(git command-not-found ssh-agent colored-man-pages extract pip zsh-autosuggestions zsh-syntax-highlighting)"
