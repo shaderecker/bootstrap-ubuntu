@@ -5,6 +5,7 @@
     - nano
     - app_icons
     - zsh
+    - applications
 
 - name: User mode
   hosts: localhost

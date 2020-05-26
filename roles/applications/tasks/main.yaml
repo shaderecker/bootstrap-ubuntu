@@ -1,0 +1,122 @@
+- name: Install rhythmbox
+  apt:
+    force_apt_get: yes
+    name: rhythmbox
+
+- name: Remove snap-store
+  snap:
+    name: snap-store
+    state: absent
+
+- name: Install gnome-software
+  apt:
+    force_apt_get: yes
+    name: gnome-software
+
+- name: Install totem
+  apt:
+    force_apt_get: yes
+    name: totem
+
+- name: Install vlc
+  apt:
+    force_apt_get: yes
+    name: vlc
+
+- name: Install virtualbox
+  apt:
+    force_apt_get: yes
+    name: virtualbox
+
+- name: Install gnome-tweaks
+  apt:
+    force_apt_get: yes
+    name: gnome-tweaks
+
+- name: Install steam
+  apt:
+    force_apt_get: yes
+    name: steam
+
+- name: Install peek
+  apt:
+    force_apt_get: yes
+    name: peek
+
+- name: Install obs-studio
+  apt:
+    force_apt_get: yes
+    name: obs-studio
+
+- name: Install inkscape
+  apt:
+    force_apt_get: yes
+    name: inkscape
+
+- name: Install gimp
+  apt:
+    force_apt_get: yes
+    name: gimp
+
+- name: Install simple-scan
+  apt:
+    force_apt_get: yes
+    name: simple-scan
+
+- name: Install baobab
+  apt:
+    force_apt_get: yes
+    name: baobab
+
+- name: Install dconf-editor
+  apt:
+    force_apt_get: yes
+    name: dconf-editor
+
+- name: Install gnome-calculator
+  apt:
+    force_apt_get: yes
+    name: gnome-calculator
+
+- name: Install blender
+  apt:
+    force_apt_get: yes
+    name: blender
+
+- name: Install deja-dup
+  apt:
+    force_apt_get: yes
+    name: deja-dup
+
+- name: Install audacity
+  apt:
+    force_apt_get: yes
+    name: audacity
+
+- name: Install libreoffice
+  apt:
+    force_apt_get: yes
+    name: libreoffice
+
+- name: Install gnome-shell-extension-prefs
+  apt:
+    force_apt_get: yes
+    name: gnome-shell-extension-prefs
+
+- name: Install android-studio
+  snap:
+    name: android-studio
+    classic: yes
+
+- name: Install chromium
+  snap:
+    name: chromium
+
+- name: Install eclipse
+  snap:
+    name: eclipse
+    classic: yes
+
+- name: Install google-play-music-desktop-player
+  snap:
+    name: google-play-music-desktop-player
