@@ -1,0 +1,10 @@
+- name: Readable interface names
+  lineinfile:
+    path: /etc/default/grub
+    regexp: "^GRUB_CMDLINE_LINUX="
+    line: GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+  register: grub
+
+- name: Regenerate grub config
+  command: update-grub
+  when: grub.changed == true

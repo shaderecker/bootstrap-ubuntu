@@ -6,6 +6,7 @@
     - app_icons
     - zsh
     - applications
+    - grub
 
 - name: User mode
   hosts: localhost
