@@ -12,3 +12,4 @@
   roles:
     - nano
     - zsh
+    - sudo

@@ -1,0 +1,6 @@
+- name: Add user to sudoers file
+  lineinfile:
+    path: /etc/sudoers
+    line: "{{ ansible_user_id }} ALL=(ALL) NOPASSWD: ALL"
+    validate: visudo -cf %s
+  become: yes
