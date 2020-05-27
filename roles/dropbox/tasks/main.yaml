@@ -1,0 +1,9 @@
+- name: Add apt repository
+  apt_repository:
+    filename: dropbox
+    repo: deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu disco main
+
+- name: Install dropbox
+  apt:
+    force_apt_get: yes
+    name: dropbox
