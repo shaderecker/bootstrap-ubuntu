@@ -28,6 +28,11 @@
     force_apt_get: yes
     name: virtualbox
 
+- name: Install virtualbox-guest-additions-iso
+  apt:
+    force_apt_get: yes
+    name: virtualbox-guest-additions-iso
+
 - name: Install gnome-tweaks
   apt:
     force_apt_get: yes
