@@ -33,6 +33,11 @@
     force_apt_get: yes
     name: virtualbox-guest-additions-iso
 
+- name: Accept license
+  command:
+    cmd: debconf-set-selections
+    stdin: virtualbox-ext-pack virtualbox-ext-pack/license select true
+
 - name: Install virtualbox-ext-pack
   apt:
     force_apt_get: yes
