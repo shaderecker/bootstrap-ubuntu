@@ -33,6 +33,11 @@
     force_apt_get: yes
     name: virtualbox-guest-additions-iso
 
+- name: Install virtualbox-ext-pack
+  apt:
+    force_apt_get: yes
+    name: virtualbox-ext-pack
+
 - name: Install gnome-tweaks
   apt:
     force_apt_get: yes
