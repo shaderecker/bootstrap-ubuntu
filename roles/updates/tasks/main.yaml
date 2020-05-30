@@ -1,0 +1,7 @@
+- name: Update everything
+  apt:
+    force_apt_get: yes
+    autoclean: yes
+    autoremove: yes
+    update_cache: yes
+    upgrade: dist

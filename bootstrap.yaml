@@ -2,6 +2,7 @@
   hosts: localhost
   become: yes
   roles:
+    - updates
     - nano
     - app_icons
     - zsh
