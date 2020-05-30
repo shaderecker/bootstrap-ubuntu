@@ -9,6 +9,7 @@
     - cli_applications
     - grub
     - dropbox
+    - music_manager
 
 - name: User mode
   hosts: localhost
