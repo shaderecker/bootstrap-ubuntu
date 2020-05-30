@@ -1,3 +1,7 @@
+- name: Add dropbox apt key
+  apt_key:
+    data: "{{ lookup('file', 'dropbox.key') }}"
+
 - name: Add apt repository
   apt_repository:
     filename: dropbox
@@ -6,4 +10,5 @@
 - name: Install dropbox
   apt:
     force_apt_get: yes
+    update_cache: yes
     name: dropbox
