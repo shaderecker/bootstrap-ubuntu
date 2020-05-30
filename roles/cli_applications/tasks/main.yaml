@@ -1,0 +1,4 @@
+- name: Install python3-gpg for dropbox
+  apt:
+    force_apt_get: yes
+    name: python3-gpg
