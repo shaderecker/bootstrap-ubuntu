@@ -1,0 +1,6 @@
+- name: Select editor
+  lineinfile:
+    path: "{{ ansible_user_dir }}/.selected_editor"
+    regexp: "^SELECTED_EDITOR="
+    create: yes
+    line: SELECTED_EDITOR="/bin/nano"

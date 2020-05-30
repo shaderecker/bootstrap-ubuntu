@@ -11,6 +11,7 @@
     - dropbox
     - music_manager
     - minecraft
+    - select_editor
 
 - name: User mode
   hosts: localhost
@@ -18,3 +19,4 @@
     - nano
     - zsh
     - sudo
+    - select_editor
