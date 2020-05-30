@@ -10,6 +10,7 @@
     - grub
     - dropbox
     - music_manager
+    - minecraft
 
 - name: User mode
   hosts: localhost
