@@ -1,4 +1,0 @@
-- name: Install minecraft
-  apt:
-    force_apt_get: yes
-    deb: https://launcher.mojang.com/download/Minecraft.deb

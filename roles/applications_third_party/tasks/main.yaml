@@ -12,3 +12,13 @@
     force_apt_get: yes
     update_cache: yes
     name: dropbox
+
+- name: Install minecraft
+  apt:
+    force_apt_get: yes
+    deb: https://launcher.mojang.com/download/Minecraft.deb
+
+- name: Install music manager
+  apt:
+    force_apt_get: yes
+    deb: https://dl.google.com/linux/direct/google-musicmanager-beta_current_amd64.deb
