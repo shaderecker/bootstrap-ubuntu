@@ -6,8 +6,10 @@
     - nano
     - app_icons
     - zsh
-    - applications
-    - cli_applications
+    - applications_apt
+    - applications_apt_cli
+    - applications_apt_third_party
+    - applications_snap
     - grub
     - dropbox
     - music_manager

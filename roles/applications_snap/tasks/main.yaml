@@ -1,0 +1,22 @@
+- name: Remove snap-store
+  snap:
+    name: snap-store
+    state: absent
+
+- name: Install android-studio
+  snap:
+    name: android-studio
+    classic: yes
+
+- name: Install chromium
+  snap:
+    name: chromium
+
+- name: Install eclipse
+  snap:
+    name: eclipse
+    classic: yes
+
+- name: Install google-play-music-desktop-player
+  snap:
+    name: google-play-music-desktop-player
