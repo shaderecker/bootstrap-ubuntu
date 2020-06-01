@@ -1,7 +1,10 @@
-- name: Update everything
+- name: Update apt packages
   apt:
     force_apt_get: yes
     autoclean: yes
     autoremove: yes
     update_cache: yes
     upgrade: dist
+
+- name: Update snaps
+  command: snap refresh
