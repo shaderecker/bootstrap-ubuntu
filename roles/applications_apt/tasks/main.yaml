@@ -1,114 +1,31 @@
-- name: Install rhythmbox
-  apt:
-    force_apt_get: yes
-    name: rhythmbox
-
-- name: Install gnome-software
-  apt:
-    force_apt_get: yes
-    name: gnome-software
-
-- name: Install totem
-  apt:
-    force_apt_get: yes
-    name: totem
-
-- name: Install vlc
-  apt:
-    force_apt_get: yes
-    name: vlc
-
-- name: Install virtualbox
-  apt:
-    force_apt_get: yes
-    name: virtualbox
-
-- name: Install virtualbox-guest-additions-iso
-  apt:
-    force_apt_get: yes
-    name: virtualbox-guest-additions-iso
-
-- name: Accept license
+- name: Accept virtualbox-ext-pack license
   command:
     cmd: debconf-set-selections
     stdin: virtualbox-ext-pack virtualbox-ext-pack/license select true
 
-- name: Install virtualbox-ext-pack
+- name: Install applications
   apt:
     force_apt_get: yes
-    name: virtualbox-ext-pack
-
-- name: Install gnome-tweaks
-  apt:
-    force_apt_get: yes
-    name: gnome-tweaks
-
-- name: Install steam
-  apt:
-    force_apt_get: yes
-    name: steam
-
-- name: Install peek
-  apt:
-    force_apt_get: yes
-    name: peek
-
-- name: Install obs-studio
-  apt:
-    force_apt_get: yes
-    name: obs-studio
-
-- name: Install inkscape
-  apt:
-    force_apt_get: yes
-    name: inkscape
-
-- name: Install gimp
-  apt:
-    force_apt_get: yes
-    name: gimp
-
-- name: Install simple-scan
-  apt:
-    force_apt_get: yes
-    name: simple-scan
-
-- name: Install baobab
-  apt:
-    force_apt_get: yes
-    name: baobab
-
-- name: Install dconf-editor
-  apt:
-    force_apt_get: yes
-    name: dconf-editor
-
-- name: Install gnome-calculator
-  apt:
-    force_apt_get: yes
-    name: gnome-calculator
-
-- name: Install blender
-  apt:
-    force_apt_get: yes
-    name: blender
-
-- name: Install deja-dup
-  apt:
-    force_apt_get: yes
-    name: deja-dup
-
-- name: Install audacity
-  apt:
-    force_apt_get: yes
-    name: audacity
-
-- name: Install libreoffice
-  apt:
-    force_apt_get: yes
-    name: libreoffice
-
-- name: Install gnome-shell-extension-prefs
-  apt:
-    force_apt_get: yes
-    name: gnome-shell-extension-prefs
+    name:
+      - audacity
+      - baobab
+      - blender
+      - dconf-editor
+      - deja-dup
+      - gimp
+      - gnome-calculator
+      - gnome-shell-extension-prefs
+      - gnome-software
+      - gnome-tweaks
+      - inkscape
+      - libreoffice
+      - obs-studio
+      - peek
+      - rhythmbox
+      - simple-scan
+      - steam
+      - totem
+      - virtualbox
+      - virtualbox-ext-pack
+      - virtualbox-guest-additions-iso
+      - vlc

@@ -2,7 +2,7 @@
   apt_key:
     data: "{{ lookup('file', 'dropbox.key') }}"
 
-- name: Add apt repository
+- name: Add dropbox apt repository
   apt_repository:
     filename: dropbox
     repo: deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu disco main
