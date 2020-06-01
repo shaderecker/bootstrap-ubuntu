@@ -6,6 +6,7 @@
       - beignet-opencl-icd
       - curl
       - dnsutils
+      - graphviz
       - ncdu
       - net-tools
       - nmap

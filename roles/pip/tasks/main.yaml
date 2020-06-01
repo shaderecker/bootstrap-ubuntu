@@ -1,0 +1,7 @@
+- name: Install pip applications
+  pip:
+    name:
+      - ansible
+      - ansible-lint
+      - ansible-playbook-grapher
+    state: latest

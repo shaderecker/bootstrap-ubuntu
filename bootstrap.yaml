@@ -10,6 +10,7 @@
     - applications_snap
     - grub
     - nano
+    - pip
     - select_editor
     - zsh
 
