@@ -1,0 +1,29 @@
+- name: Disable desktop-icons extension
+  command: gnome-extensions disable desktop-icons@csoriano
+
+- name: Show week numbers in calendar
+  command: gsettings set org.gnome.desktop.calendar show-weekdate true
+
+- name: Show weekday in top bar
+  command: gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+- name: Enable dark theme
+  command: gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+
+- name: Enable window minimize on click
+  command: gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize-or-previews
+
+- name: Enable night light
+  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+- name: Set manual night light schedule
+  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false
+
+- name: Set night light start time
+  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 18
+
+- name: Set night light end time
+  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 6
+
+- name: Set night light temperature
+  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4700

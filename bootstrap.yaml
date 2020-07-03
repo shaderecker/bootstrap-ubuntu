@@ -20,5 +20,6 @@
     - extensions
     - nano
     - select_editor
+    - settings
     - sudo
     - zsh
