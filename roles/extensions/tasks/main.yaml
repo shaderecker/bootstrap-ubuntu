@@ -1,0 +1,41 @@
+- name: Check for extension gnome-bluetooth-quick-connect
+  stat:
+    path: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com"
+  register: extension_bluetooth
+
+- name: Install gnome-bluetooth-quick-connect
+  block:
+    - name: Download gnome-bluetooth-quick-connect
+      git:
+        repo: https://github.com/bjarosze/gnome-bluetooth-quick-connect.git
+        dest: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com"
+
+    - name: Make extension
+      command:
+        cmd: make
+        chdir: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com"
+
+    - name: Enable extension
+      command: gnome-extensions enable bluetooth-quick-connect@bjarosze.gmail.com
+  when: extension_bluetooth.stat.isdir is not defined
+
+- name: Check for extension autohide-battery
+  stat:
+    path: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/autohide-battery@sitnik.ru"
+  register: extension_battery
+
+- name: Install autohide-battery
+  block:
+    - name: Download autohide-battery
+      git:
+        repo: https://github.com/ai/autohide-battery.git
+        dest: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/autohide-battery@sitnik.ru"
+
+    - name: Compile schemas
+      command:
+        cmd: glib-compile-schemas --strict --targetdir=schemas schemas
+        chdir: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/autohide-battery@sitnik.ru"
+
+    - name: Enable extension
+      command: gnome-extensions enable autohide-battery@sitnik.ru
+  when: extension_battery.stat.isdir is not defined

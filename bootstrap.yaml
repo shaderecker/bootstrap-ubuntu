@@ -17,6 +17,7 @@
 - name: User mode
   hosts: localhost
   roles:
+    - extensions
     - nano
     - select_editor
     - sudo
