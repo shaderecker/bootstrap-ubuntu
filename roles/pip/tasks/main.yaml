@@ -5,4 +5,5 @@
       - ansible-lint
       - ansible-playbook-grapher
       - pip
+      - psutil
     state: latest
