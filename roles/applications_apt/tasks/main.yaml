@@ -1,7 +1,9 @@
 - name: Accept virtualbox-ext-pack license
-  command:
-    cmd: debconf-set-selections
-    stdin: virtualbox-ext-pack virtualbox-ext-pack/license select true
+  debconf:
+    name: virtualbox-ext-pack
+    question: virtualbox-ext-pack/license
+    value: "true"
+    vtype: select
 
 - name: Install applications
   apt:
