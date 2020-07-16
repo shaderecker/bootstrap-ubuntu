@@ -2,28 +2,46 @@
   command: gnome-extensions disable desktop-icons@csoriano
 
 - name: Show week numbers in calendar
-  command: gsettings set org.gnome.desktop.calendar show-weekdate true
+  dconf:
+    key: "/org/gnome/desktop/calendar/show-weekdate"
+    value: "true"
 
 - name: Show weekday in top bar
-  command: gsettings set org.gnome.desktop.interface clock-show-weekday true
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
 
 - name: Enable dark theme
-  command: gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "'Yaru-dark'"
 
 - name: Enable window minimize on click
-  command: gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize-or-previews
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/click-action"
+    value: "'minimize-or-previews'"
 
 - name: Enable night light
-  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
 
 - name: Set manual night light schedule
-  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic false
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic"
+    value: "false"
 
 - name: Set night light start time
-  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 18
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from"
+    value: "18.0"
 
 - name: Set night light end time
-  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 6
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to"
+    value: "6.0"
 
 - name: Set night light temperature
-  command: gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4700
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature"
+    value: "uint32 4700"
