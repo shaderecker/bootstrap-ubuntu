@@ -16,7 +16,3 @@
   snap:
     name: eclipse
     classic: yes
-
-- name: Install google-play-music-desktop-player
-  snap:
-    name: google-play-music-desktop-player

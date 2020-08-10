@@ -2,6 +2,7 @@
   hosts: localhost
   become: yes
   roles:
+    - cleanup
     - updates
     - app_icons
     - applications_apt
@@ -17,6 +18,7 @@
 - name: User mode
   hosts: localhost
   roles:
+    - cleanup
     - extensions
     - nano
     - select_editor
