@@ -12,6 +12,7 @@
     - nano
     - pip
     - select_editor
+    - vim
     - zsh
 
 - name: User mode
@@ -22,4 +23,5 @@
     - select_editor
     - settings
     - sudo
+    - vim
     - zsh

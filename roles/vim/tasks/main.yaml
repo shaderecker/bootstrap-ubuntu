@@ -1,0 +1,9 @@
+- name: Configure vim
+  blockinfile:
+    path: "{{ ansible_user_dir }}/.vimrc"
+    create: yes
+    marker: "\" {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      set expandtab
+      set shiftwidth=2
+      set softtabstop=2
