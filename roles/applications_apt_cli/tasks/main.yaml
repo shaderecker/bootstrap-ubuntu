@@ -13,4 +13,5 @@
       - python3-gpg
       - python3-pip
       - tree
+      - vim
       - vnstat
