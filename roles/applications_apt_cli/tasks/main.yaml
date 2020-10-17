@@ -8,6 +8,7 @@
       - dnsutils
       - graphviz
       - ncdu
+      - neofetch
       - net-tools
       - nmap
       - python3-gpg
