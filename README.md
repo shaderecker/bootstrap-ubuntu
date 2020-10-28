@@ -6,6 +6,8 @@ As I introduce new config changes to my systems, they will be added here.
 
 Also, should I set up one of my systems completely from scratch in the future, I will put every step here in this playbook.
 
-**Plz remember future me**
+Plz remember future me.
 
-As baseline Ubuntu (20.04) is installed in "Minimal Install" mode.
+**UPDATE: Ok, I remembered and now everything is included in this playbook.** :grin:
+
+As baseline, Ubuntu (20.04) is installed in "Minimal Install" mode.
