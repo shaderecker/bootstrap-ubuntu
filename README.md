@@ -16,7 +16,7 @@ As baseline, Ubuntu (20.10) is installed in "Minimal Install" mode.
 ### Instructions
 On a fresh installation, install Ansible and git:
 ```
-apt install ansible git
+sudo apt install ansible git
 ```
 
 Clone the git repo:
@@ -31,7 +31,7 @@ ansible-playbook bootstrap.yaml --ask-become-pass
 
 Afterwards you can remove the Ansible apt package as it is managed via pip now:
 ```
-apt remove ansible
+sudo apt remove ansible
 ```
 
 For consecutive runs, you can just use this, as the sudo password is no longer required:
