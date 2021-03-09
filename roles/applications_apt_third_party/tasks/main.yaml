@@ -1,3 +1,8 @@
+- name: Install chrome
+  apt:
+    force_apt_get: yes
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
 - name: Add dropbox apt key
   apt_key:
     data: "{{ lookup('file', 'dropbox.key') }}"

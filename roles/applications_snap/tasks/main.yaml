@@ -6,6 +6,7 @@
 - name: Install chromium
   snap:
     name: chromium
+    state: absent
 
 - name: Install eclipse
   snap:
