@@ -3,11 +3,6 @@
     name: android-studio
     classic: yes
 
-- name: Install chromium
-  snap:
-    name: chromium
-    state: absent
-
 - name: Install eclipse
   snap:
     name: eclipse
