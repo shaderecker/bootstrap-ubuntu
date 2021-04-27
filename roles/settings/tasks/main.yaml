@@ -1,6 +1,9 @@
 - name: Disable desktop-icons extension
   command: gnome-extensions disable desktop-icons@csoriano
 
+- name: Disable desktop-icons ng extension
+  command: gnome-extensions disable ding@rastersoft.com
+
 - name: Show week numbers in calendar
   dconf:
     key: "/org/gnome/desktop/calendar/show-weekdate"
