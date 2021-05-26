@@ -1,8 +1,16 @@
 - name: Disable desktop-icons extension
   command: gnome-extensions disable desktop-icons@csoriano
+  register: result
+  failed_when:
+    - result.rc != 0
+    - '"does not exist" not in result.stderr'
 
 - name: Disable desktop-icons ng extension
   command: gnome-extensions disable ding@rastersoft.com
+  register: result
+  failed_when:
+    - result.rc != 0
+    - '"does not exist" not in result.stderr'
 
 - name: Show week numbers in calendar
   dconf:
