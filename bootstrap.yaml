@@ -7,7 +7,7 @@
     - applications_apt
     - applications_apt_cli
     - applications_apt_third_party
-    - applications_snap
+#    - applications_snap
     - grub
     - nano
     - pip
