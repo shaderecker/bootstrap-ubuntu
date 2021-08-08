@@ -13,6 +13,7 @@
       - nmap
       - python3-gpg
       - python3-pip
+      - tmux
       - tree
       - vim
       - vnstat
