@@ -2,6 +2,7 @@
   blockinfile:
     path: "{{ ansible_user_dir }}/.nanorc"
     create: yes
+    mode: 0644
     block: |
       set tabsize 4
       set tabstospaces

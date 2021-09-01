@@ -2,6 +2,7 @@
   blockinfile:
     path: "{{ ansible_user_dir }}/.vimrc"
     create: yes
+    mode: 0644
     marker: "\" {mark} ANSIBLE MANAGED BLOCK"
     block: |
       set expandtab

@@ -3,4 +3,5 @@
     path: "{{ ansible_user_dir }}/.selected_editor"
     regexp: "^SELECTED_EDITOR="
     create: yes
+    mode: 0644
     line: SELECTED_EDITOR="/usr/bin/vim"

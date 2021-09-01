@@ -25,6 +25,7 @@
     dest: "{{ ansible_user_dir }}/.zshrc"
     remote_src: yes
     force: no
+    mode: 0644
 
 - name: Download bullet-train theme
   get_url:
