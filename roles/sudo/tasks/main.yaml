@@ -1,6 +1,7 @@
-- name: Add user to sudoers file
-  lineinfile:
-    path: /etc/sudoers
-    line: "{{ ansible_user_id }} ALL=(ALL) NOPASSWD: ALL"
+- name: Add dropin file for user
+  copy:
+    dest: /etc/sudoers.d/zzz_{{ ansible_user_id }}
+    mode: 0600
+    content: "{{ ansible_user_id }} ALL=(ALL) NOPASSWD: ALL"
     validate: visudo -cf %s
   become: yes
