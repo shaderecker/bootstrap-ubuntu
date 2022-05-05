@@ -14,9 +14,6 @@
       command:
         cmd: make
         chdir: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/bluetooth-quick-connect@bjarosze.gmail.com"
-
-    - name: Enable extension
-      command: gnome-extensions enable bluetooth-quick-connect@bjarosze.gmail.com
   when: extension_bluetooth.stat.isdir is not defined
 
 - name: Check for extension autohide-battery
@@ -35,7 +32,4 @@
       command:
         cmd: glib-compile-schemas --strict --targetdir=schemas schemas
         chdir: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/autohide-battery@sitnik.ru"
-
-    - name: Enable extension
-      command: gnome-extensions enable autohide-battery@sitnik.ru
   when: extension_battery.stat.isdir is not defined
