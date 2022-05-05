@@ -3,6 +3,7 @@
     force_apt_get: yes
     name:
       - adb
+      - chrome-gnome-shell
       - curl
       - dnsutils
       - graphviz
