@@ -4,8 +4,10 @@
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 - name: Add dropbox apt key
-  apt_key:
-    data: "{{ lookup('file', 'dropbox.key') }}"
+  copy:
+    dest: /etc/apt/trusted.gpg.d/dropbox.asc
+    mode: 0644
+    content: "{{ lookup('file', 'dropbox.asc') }}"
 
 - name: Add dropbox apt repository
   apt_repository:
