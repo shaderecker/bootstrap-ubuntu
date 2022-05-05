@@ -10,7 +10,7 @@ Plz remember future me.
 
 **UPDATE: Ok, I remembered and now everything is included in this playbook.** :grin:
 
-As baseline, Ubuntu (21.10) is installed in "Minimal Install" mode.
+As baseline, Ubuntu (22.04) is installed in "Minimal Install" mode.
 
 
 ### Instructions
