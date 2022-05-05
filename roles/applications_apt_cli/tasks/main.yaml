@@ -3,7 +3,6 @@
     force_apt_get: yes
     name:
       - adb
-      - beignet-opencl-icd
       - curl
       - dnsutils
       - graphviz
