@@ -1,13 +1,3 @@
-- name: Install android-studio
+- name: Install obs-studio
   snap:
-    name: android-studio
-    classic: yes
-
-- name: Install discord
-  snap:
-    name: discord
-
-- name: Install eclipse
-  snap:
-    name: eclipse
-    classic: yes
+    name: obs-studio
