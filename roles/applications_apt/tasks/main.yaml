@@ -18,6 +18,7 @@
       - gnome-calculator
       - gnome-shell-extension-prefs
       - gnome-tweaks
+      - icedtea-netx
       - inkscape
       - libreoffice
       - peek
