@@ -7,3 +7,4 @@
       - pip
       - psutil
     state: latest
+    extra_args: --break-system-packages
